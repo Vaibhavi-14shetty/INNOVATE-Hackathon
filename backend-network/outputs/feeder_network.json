@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "id": "SUB1",
+      "type": "substation",
+      "name": "Main Substation",
+      "lat": 18.55,
+      "lon": 73.75
+    },
+    {
+      "id": "FDR1",
+      "type": "feeder",
+      "name": "Feeder Line A",
+      "lat": 18.53,
+      "lon": 73.78
+    },
+    {
+      "id": "FDR2",
+      "type": "feeder",
+      "name": "Feeder Line B",
+      "lat": 18.58,
+      "lon": 73.8
+    },
+    {
+      "id": "TXR1",
+      "type": "transformer",
+      "name": "Transformer T1",
+      "lat": 18.51,
+      "lon": 73.8
+    },
+    {
+      "id": "TXR2",
+      "type": "transformer",
+      "name": "Transformer T2",
+      "lat": 18.6,
+      "lon": 73.82
+    },
+    {
+      "id": "VIL1",
+      "type": "village",
+      "name": "Village Rampur",
+      "lat": 18.5,
+      "lon": 73.81
+    },
+    {
+      "id": "VIL2",
+      "type": "village",
+      "name": "Village Shivpur",
+      "lat": 18.61,
+      "lon": 73.83
+    }
+  ],
+  "edges": [
+    {
+      "source": "SUB1",
+      "target": "FDR1"
+    },
+    {
+      "source": "SUB1",
+      "target": "FDR2"
+    },
+    {
+      "source": "FDR1",
+      "target": "TXR1"
+    },
+    {
+      "source": "FDR2",
+      "target": "TXR2"
+    },
+    {
+      "source": "TXR1",
+      "target": "VIL1"
+    },
+    {
+      "source": "TXR2",
+      "target": "VIL2"
+    }
+  ]
+}
