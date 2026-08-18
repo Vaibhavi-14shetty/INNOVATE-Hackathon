@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2026-08-17 14:00:00",
+    "current_Ia": 729.85,
+    "voltage_Va": -0.004,
+    "fault_type": "unclassified",
+    "anomaly_score": -0.0293,
+    "status": "Fault Detected",
+    "village": null
+  },
+  {
+    "timestamp": "2026-08-17 14:05:00",
+    "current_Ia": 502.85,
+    "voltage_Va": 0.0304,
+    "fault_type": "unclassified",
+    "anomaly_score": -0.0721,
+    "status": "Fault Detected",
+    "village": null
+  },
+  {
+    "timestamp": "2026-08-17 14:10:00",
+    "current_Ia": -36.0,
+    "voltage_Va": -0.4945,
+    "fault_type": "unclassified",
+    "anomaly_score": -0.0863,
+    "status": "Fault Detected",
+    "village": null
+  },
+  {
+    "timestamp": "2026-08-17 14:15:00",
+    "current_Ia": -16.11,
+    "voltage_Va": -0.6174,
+    "fault_type": "unclassified",
+    "anomaly_score": -0.0069,
+    "status": "Fault Detected",
+    "village": null
+  },
+  {
+    "timestamp": "2026-08-17 14:20:00",
+    "current_Ia": -813.94,
+    "voltage_Va": -0.0318,
+    "fault_type": "unclassified",
+    "anomaly_score": -0.0288,
+    "status": "Fault Detected",
+    "village": null
+  }
+]
