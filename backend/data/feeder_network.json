@@ -1,0 +1,102 @@
+{
+  "substation": {
+    "id": "S1",
+    "name": "Central Rural Substation",
+    "type": "substation",
+    "voltage_kv": 33,
+    "status": "active"
+  },
+  "feeders": [
+    {
+      "id": "F1",
+      "name": "Feeder F1",
+      "type": "feeder",
+      "voltage_kv": 11,
+      "status": "active",
+      "parent": "S1"
+    },
+    {
+      "id": "F2",
+      "name": "Feeder F2",
+      "type": "feeder",
+      "voltage_kv": 11,
+      "status": "active",
+      "parent": "S1"
+    }
+  ],
+  "transformers": [
+    {
+      "id": "T1",
+      "name": "Transformer T1",
+      "type": "transformer",
+      "capacity_kva": 100,
+      "current_load_percent": 62,
+      "status": "active",
+      "parent": "F1"
+    },
+    {
+      "id": "T2",
+      "name": "Transformer T2",
+      "type": "transformer",
+      "capacity_kva": 160,
+      "current_load_percent": 78,
+      "status": "active",
+      "parent": "F1"
+    },
+    {
+      "id": "T3",
+      "name": "Transformer T3",
+      "type": "transformer",
+      "capacity_kva": 100,
+      "current_load_percent": 55,
+      "status": "active",
+      "parent": "F2"
+    },
+    {
+      "id": "T4",
+      "name": "Transformer T4",
+      "type": "transformer",
+      "capacity_kva": 160,
+      "current_load_percent": 71,
+      "status": "active",
+      "parent": "F2"
+    }
+  ],
+  "villages": [
+    {
+      "id": "V1",
+      "name": "Village A",
+      "type": "village",
+      "consumers": 185,
+      "parent": "T1"
+    },
+    {
+      "id": "V2",
+      "name": "Village B",
+      "type": "village",
+      "consumers": 140,
+      "parent": "T1"
+    },
+    {
+      "id": "V3",
+      "name": "Village C",
+      "type": "village",
+      "consumers": 220,
+      "parent": "T2"
+    },
+    {
+      "id": "V4",
+      "name": "Village D",
+      "type": "village",
+      "consumers": 165,
+      "parent": "T3"
+    },
+    {
+      "id": "V5",
+      "name": "Village E",
+      "type": "village",
+      "consumers": 195,
+      "parent": "T4"
+    }
+  ]
+}

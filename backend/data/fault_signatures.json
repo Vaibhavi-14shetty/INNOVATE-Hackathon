@@ -1,0 +1,72 @@
+{
+  "fault_signatures": [
+    {
+      "fault_id": "F01",
+      "fault_type": "conductor_damage",
+      "display_name": "Conductor Damage",
+      "probable_causes": [
+        "Conductor breakage",
+        "Mechanical damage",
+        "Weather-related damage"
+      ],
+      "electrical_signatures": {
+        "voltage": "sudden_voltage_drop",
+        "current": "current_imbalance_or_sudden_change",
+        "pattern": "abrupt_change"
+      },
+      "severity": "high",
+      "description": "Damage or breakage in a distribution conductor can cause abnormal voltage and current conditions and may interrupt supply to downstream consumers."
+    },
+    {
+      "fault_id": "F02",
+      "fault_type": "transformer_overload",
+      "display_name": "Transformer Overload",
+      "probable_causes": [
+        "Excessive connected load",
+        "Peak demand",
+        "Uneven load distribution"
+      ],
+      "electrical_signatures": {
+        "voltage": "possible_voltage_reduction",
+        "current": "sustained_high_current",
+        "pattern": "high_load_over_extended_period"
+      },
+      "severity": "high",
+      "description": "A transformer operating beyond or close to its rated capacity can experience sustained high current, heating and possible voltage deterioration."
+    },
+    {
+      "fault_id": "F03",
+      "fault_type": "vegetation_contact",
+      "display_name": "Vegetation Contact",
+      "probable_causes": [
+        "Tree branches touching conductors",
+        "Overgrown vegetation near lines",
+        "Wind-driven branch movement"
+      ],
+      "electrical_signatures": {
+        "voltage": "intermittent_voltage_fluctuation",
+        "current": "transient_or_fluctuating_current",
+        "pattern": "intermittent_abnormal_events"
+      },
+      "severity": "medium",
+      "description": "Vegetation contacting an overhead conductor can produce intermittent or transient electrical disturbances, particularly during wind or wet conditions."
+    },
+    {
+      "fault_id": "F04",
+      "fault_type": "illegal_tapping",
+      "display_name": "Illegal Tapping",
+      "probable_causes": [
+        "Unauthorized connection",
+        "Electricity theft",
+        "Unmetered load connection"
+      ],
+      "electrical_signatures": {
+        "voltage": "possible_voltage_drop",
+        "current": "unexpected_load_increase",
+        "pattern": "abnormal_load_mismatch"
+      },
+      "severity": "medium",
+      "description": "Unauthorized connections can create unexpected loading and discrepancies between expected and observed feeder consumption."
+    }
+  ]
+}
