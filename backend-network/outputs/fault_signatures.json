@@ -1,0 +1,26 @@
+{
+  "conductor_damage": {
+    "description": "Broken or damaged conductor wire",
+    "voltage_pattern": "Sudden voltage drop to near-zero on affected section",
+    "current_pattern": "Current drops sharply or spikes momentarily then drops",
+    "typical_cause": "Physical wire snap, corrosion, storm damage"
+  },
+  "transformer_overload": {
+    "description": "Transformer operating beyond rated capacity",
+    "voltage_pattern": "Gradual voltage sag over sustained period",
+    "current_pattern": "Current consistently above rated threshold",
+    "typical_cause": "Excess simultaneous load, summer peak demand"
+  },
+  "vegetation_contact": {
+    "description": "Tree branch or vegetation touching live line",
+    "voltage_pattern": "Intermittent voltage fluctuation/flicker",
+    "current_pattern": "Irregular current spikes, often weather-correlated",
+    "typical_cause": "Untrimmed trees near feeder lines, monsoon growth"
+  },
+  "illegal_connection": {
+    "description": "Unauthorized power tapping",
+    "voltage_pattern": "Localized voltage drop in specific section",
+    "current_pattern": "Current higher than expected for registered load",
+    "typical_cause": "Unmetered rural tapping"
+  }
+}
