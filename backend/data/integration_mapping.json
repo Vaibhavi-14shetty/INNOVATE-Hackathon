@@ -1,0 +1,20 @@
+{
+  "scenario_id": "SC-001",
+  "ml_result": {
+    "detector": "Isolation Forest",
+    "result": "anomaly_detected",
+    "source": "electrical feeder measurements"
+  },
+  "domain_mapping": {
+    "fault_id": "F02",
+    "fault_type": "transformer_overload",
+    "asset_id": "T2",
+    "feeder_id": "F1",
+    "affected_village": "Village C",
+    "severity": "high"
+  },
+  "dashboard": {
+    "confidence": 92,
+    "probable_cause": "Excessive connected load"
+  }
+}
