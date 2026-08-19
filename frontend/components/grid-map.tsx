@@ -49,11 +49,14 @@ const substation: [number, number] = [18.75, 73.85];
 
 const transformerT101: [number, number] = [18.76, 73.87];
 
-const transformerT102: [number, number] = [18.77, 73.89];
+// Integrated fault asset:
+// Feeder F1 → Transformer T2 → Village C
+const transformerT2: [number, number] = [18.77, 73.89];
 
 const transformerT118: [number, number] = [18.73, 73.88];
 
-const villageKhed: [number, number] = [18.765, 73.875];
+// Integrated affected village
+const villageC: [number, number] = [18.765, 73.875];
 
 const villageRajgurunagar: [number, number] = [18.775, 73.895];
 
@@ -62,7 +65,7 @@ const villageManchar: [number, number] = [18.735, 73.885];
 const feederNorth: [number, number][] = [
   substation,
   transformerT101,
-  transformerT102,
+  transformerT2,
 ];
 
 const feederSouth: [number, number][] = [
@@ -78,7 +81,6 @@ export default function GridMap() {
       scrollWheelZoom={true}
       className="h-full w-full"
     >
-
       <TileLayer
         attribution="&copy; OpenStreetMap contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -107,67 +109,79 @@ export default function GridMap() {
         icon={defaultIcon}
       >
         <Popup>
-          <strong>Substation S-01</strong>
+          <strong>Substation S1</strong>
           <br />
-          Rural Pune Grid
+          Central Rural Substation
           <br />
-          Status: Operational
+          Voltage: 33 kV
+          <br />
+          Status: Active
         </Popup>
       </Marker>
 
-      {/* Transformer T-101 */}
+      {/* Transformer T1 */}
       <Marker
         position={transformerT101}
         icon={defaultIcon}
       >
         <Popup>
-          <strong>Transformer T-101</strong>
+          <strong>Transformer T1</strong>
+          <br />
+          Feeder: F1
           <br />
           Status: Operational
         </Popup>
       </Marker>
 
-      {/* Transformer T-102 - Fault */}
+      {/* Transformer T2 - Integrated Fault */}
       <Marker
-        position={transformerT102}
+        position={transformerT2}
         icon={faultIcon}
       >
         <Popup>
-          <strong>Transformer T-102</strong>
+          <strong>Transformer T2</strong>
+          <br />
+          Feeder: F1
           <br />
           Fault: Transformer Overload
+          <br />
+          Fault ID: F02
           <br />
           Severity: High
           <br />
           AI Confidence: 92%
+          <br />
+          Affected Village: Village C
+          <br />
+          Cause: Excessive connected load
         </Popup>
       </Marker>
 
-      {/* Transformer T-118 - Fault */}
+      {/* Transformer T3 */}
       <Marker
         position={transformerT118}
-        icon={faultIcon}
+        icon={defaultIcon}
       >
         <Popup>
-          <strong>Transformer T-118</strong>
+          <strong>Transformer T3</strong>
           <br />
-          Fault: Current Surge
+          Feeder: F2
           <br />
-          Severity: Medium
-          <br />
-          AI Confidence: 79%
+          Status: Operational
         </Popup>
       </Marker>
 
-      {/* Village - Khed */}
+      {/* Village C - affected by T2 */}
       <Marker
-        position={villageKhed}
+        position={villageC}
         icon={villageIcon}
       >
         <Popup>
-          <strong>Khed</strong>
+          <strong>Village C</strong>
           <br />
-          Affected by Transformer T-102
+          Connected to Transformer T2
+          <br />
+          Affected by Transformer Overload
         </Popup>
       </Marker>
 
@@ -194,7 +208,6 @@ export default function GridMap() {
           Affected by Transformer T-118
         </Popup>
       </Marker>
-
     </MapContainer>
   );
 }

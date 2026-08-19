@@ -23,16 +23,16 @@ export const gridStats = {
 
 export const faultAlerts: FaultAlert[] = [
   {
-    id: "F-001",
+    id: "F02",
     faultType: "Transformer Overload",
     assetType: "Transformer",
-    assetId: "T-102",
-    village: "Khed",
+    assetId: "T2",
+    village: "Village C",
     severity: "HIGH",
     confidence: 92,
-    probableCause: "Excessive load on transformer",
-    affectedVillages: ["Khed", "Chakan"],
-    recommendedAction: "Inspect transformer T-102 and check load distribution",
+    probableCause: "Excessive connected load",
+    affectedVillages: ["Village C"],
+    recommendedAction: "Inspect transformer T2 and check load distribution",
   },
 
   {
